@@ -1,0 +1,165 @@
+// Camo, Lorenz T. 
+
+// BSIT-2 SVFC
+
+// 9-18-2022
+
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+int main() {
+
+    
+
+    string complete_name;
+
+    int birth_year;
+
+    int current_year;
+
+    int your_age;
+
+    string strGeneration;
+
+    
+
+    cout << "Enter your complete name: ";
+
+    getline (cin, complete_name);
+
+    
+
+    cout << "Enter your birth year: ";
+
+    cin >> birth_year;
+
+    
+
+    cout << "Enter current year: ";
+
+    cin >> current_year;
+
+    
+
+    your_age = current_year - birth_year;
+
+    
+
+    cout << "Hello " << complete_name << "!\n";
+
+    cout << "Your age is " << your_age;
+
+    
+
+    //0-14 - Child
+
+    //15-24 - Youth
+
+    //25-64 - Adult
+
+    //65 and above - Senior
+
+    
+
+    if(your_age < 15){
+
+        strGeneration = "Child";
+
+    }
+
+    else if(your_age < 25){
+
+        strGeneration = "Youth";
+
+    }
+
+    else if(your_age < 65){
+
+        strGeneration = "Adult";
+
+    }
+
+    else {
+
+        strGeneration = "Senior";
+
+    }
+
+    
+
+    cout << "\nAge Remark: " << strGeneration;
+
+    if (birth_year > 2012){
+
+      strGeneration = "No Record Found";
+
+    }
+
+    
+
+    else if (birth_year < 1922){
+
+        strGeneration = "No Record Found";
+
+    }
+
+    else if (birth_year > 1996 && birth_year < 2013 ){
+
+        strGeneration = "Gen Z";
+
+    }
+
+    else if (birth_year > 1980){
+
+        strGeneration = "Millenials";
+
+    }
+
+    else if (birth_year > 1964){
+
+        strGeneration = "Gen X";
+
+    }
+
+    else if (birth_year > 1954){
+
+        strGeneration = "Boomers II";
+
+    }
+
+    else if (birth_year > 1945){
+
+        strGeneration = "Boomers I:";
+
+    }
+
+    else if (birth_year > 1927){
+
+        strGeneration = "Post War";
+
+    }
+
+    else if (birth_year > 1921){
+
+        strGeneration = "World War II";
+
+    }
+
+    else {
+
+        strGeneration = "No Record Found";
+
+    }
+
+    
+
+    cout << "\nclassification: " << strGeneration;
+
+   
+
+    return 0;
+
+}
